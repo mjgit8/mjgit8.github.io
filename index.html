@@ -1,12 +1,195 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Website</title>
-</head>
-<body style="text-align:center; font-family:Arial;">
+<title>ANJ Publications | Indian Law Books</title>
 
-    <h1>Welcome to my website 🚀</h1>
-    <p>This site is 100% free hosted!</p>
+<style>
+body {
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background:#f9f9f9;
+}
+
+/* HEADER */
+header {
+    background:#0a0a0a;
+    color:white;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h2 {
+    margin:0;
+    letter-spacing:1px;
+}
+
+nav a {
+    color:white;
+    margin-left:20px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+nav a:hover {
+    color:#caa64b;
+}
+
+/* HERO */
+.hero {
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(to right,#111,#222);
+    color:white;
+    animation:fadeIn 1.5s ease;
+}
+
+.hero h1 {
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+.hero p {
+    font-size:18px;
+    opacity:0.8;
+}
+
+/* BUTTON */
+.btn {
+    margin-top:20px;
+    padding:12px 25px;
+    background:#caa64b;
+    color:black;
+    text-decoration:none;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+.btn:hover {
+    transform:scale(1.05);
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* SECTION */
+.section {
+    padding:60px 40px;
+    text-align:center;
+}
+
+/* BOOK GRID */
+.grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin-top:30px;
+}
+
+/* BOOK CARD */
+.card {
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    transition:0.4s;
+    opacity:0;
+    transform:translateY(30px);
+}
+
+.card img {
+    width:100%;
+    border-radius:5px;
+}
+
+.card:hover {
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* ANIMATION */
+.show {
+    opacity:1;
+    transform:translateY(0);
+    transition:1s;
+}
+
+@keyframes fadeIn {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+
+/* FOOTER */
+footer {
+    background:#111;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h2>ANJ PUBLICATIONS</h2>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Publications</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <h1>Trusted Legal Books Since 2000</h1>
+    <p>High-quality law books for students & judiciary aspirants</p>
+    <a href="#books" class="btn">View Publications</a>
+</div>
+
+<div class="section" id="books">
+    <h2>Our Publications</h2>
+
+    <h3>⚖️ Constitutional Law</h3>
+    <div class="grid">
+        <div class="card"><img src="https://via.placeholder.com/200"><h4>Constitution Guide</h4></div>
+        <div class="card"><img src="https://via.placeholder.com/200"><h4>Indian Constitution Notes</h4></div>
+    </div>
+
+    <h3>🚔 Criminal Law</h3>
+    <div class="grid">
+        <div class="card"><img src="https://via.placeholder.com/200"><h4>IPC Complete Guide</h4></div>
+        <div class="card"><img src="https://via.placeholder.com/200"><h4>Criminal Law Basics</h4></div>
+    </div>
+
+    <h3>📜 Civil Law</h3>
+    <div class="grid">
+        <div class="card"><img src="https://via.placeholder.com/200"><h4>Civil Procedure Code</h4></div>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 ANJ Publications | Contact: 7297959657</p>
+</footer>
+
+<script>
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', () => {
+    const trigger = window.innerHeight * 0.85;
+
+    cards.forEach(card => {
+        const top = card.getBoundingClientRect().top;
+
+        if(top < trigger){
+            card.classList.add('show');
+        }
+    });
+});
+</script>
 
 </body>
 </html>
