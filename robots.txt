@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow:
+
+Sitemap: https://www.indianlawbooks.in/sitemap.xml
+
+# ANJ Publications — indianlawbooks.in
