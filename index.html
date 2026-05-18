@@ -1,217 +1,1055 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>ANJ Publications | Indian Law Books</title>
-
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ANJ Publications – AIBE Bare Acts Set | Jaipur</title>
+<meta name="description" content="ANJ Publications – Complete AIBE Bare Act Set (22 Books, 45+ Acts, Diglot Hindi+English). Only ₹2200. Free AIBE Solved Papers. Free delivery in Jaipur."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
-body {
-    margin:0;
-    font-family: 'Segoe UI', sans-serif;
-    background:#f9f9f9;
-    scroll-behavior:smooth;
-}
+  :root {
+    --black: #0a0a0a;
+    --white: #ffffff;
+    --gray-100: #f5f5f5;
+    --gray-200: #e8e8e8;
+    --gray-400: #9a9a9a;
+    --gray-600: #555555;
+    --accent: #1a1a1a;
+    --gold: #c8a84b;
+    --whatsapp: #25D366;
+  }
 
-/* HEADER */
-header {
-    position:sticky;
-    top:0;
-    background:#0a0a0a;
-    color:white;
-    padding:15px 30px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    z-index:1000;
-}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-nav a {
-    color:white;
-    margin-left:20px;
-    text-decoration:none;
-    transition:0.3s;
-}
+  html { scroll-behavior: smooth; }
 
-nav a:hover {
-    color:#caa64b;
-}
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--black);
+    overflow-x: hidden;
+  }
 
-/* HERO */
-.hero {
-    height:90vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    background:linear-gradient(to right,#111,#222);
-    color:white;
-}
+  /* ── TOPBAR ── */
+  .topbar {
+    background: var(--black);
+    color: var(--white);
+    text-align: center;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    padding: 10px 20px;
+    font-weight: 500;
+  }
+  .topbar span { color: var(--gold); }
 
-.hero h1 {
-    font-size:50px;
-}
+  /* ── NAV ── */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 6vw;
+    border-bottom: 1px solid var(--gray-200);
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.97);
+    backdrop-filter: blur(8px);
+    z-index: 100;
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: var(--black);
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--gold); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    color: var(--gray-600);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--black); }
+  .nav-cta {
+    background: var(--whatsapp);
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600 !important;
+    font-size: 0.82rem !important;
+    letter-spacing: 0.04em !important;
+    transition: opacity 0.2s !important;
+  }
+  .nav-cta:hover { opacity: 0.88; color: white !important; }
 
-.hero p {
-    opacity:0.8;
-}
+  /* ── HERO ── */
+  .hero {
+    min-height: 92vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 60px 6vw;
+    gap: 60px;
+    background: var(--white);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: 'LAW';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    font-family: 'Playfair Display', serif;
+    font-size: 18vw;
+    font-weight: 900;
+    color: var(--gray-100);
+    pointer-events: none;
+    user-select: none;
+    line-height: 1;
+    z-index: 0;
+  }
+  .hero-left { position: relative; z-index: 1; }
+  .hero-tag {
+    display: inline-block;
+    background: var(--black);
+    color: var(--gold);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 2px;
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: var(--black);
+    margin-bottom: 16px;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--gold);
+  }
+  .hero-sub {
+    font-size: 1.05rem;
+    color: var(--gray-600);
+    line-height: 1.7;
+    margin-bottom: 32px;
+    font-weight: 300;
+  }
+  .hero-sub strong { color: var(--black); font-weight: 600; }
 
-/* BUTTON */
-.btn {
-    margin-top:20px;
-    padding:12px 25px;
-    background:#caa64b;
-    color:black;
-    text-decoration:none;
-    border-radius:5px;
-    transition:0.3s;
-}
+  /* Price block */
+  .price-block {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+  .price-main {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--black);
+    line-height: 1;
+  }
+  .price-old {
+    font-size: 1.1rem;
+    color: var(--gray-400);
+    text-decoration: line-through;
+    margin-bottom: 8px;
+  }
+  .price-tag-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--gray-400);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
 
-.btn:hover {
-    transform:scale(1.05);
-}
+  /* Badges */
+  .badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 36px;
+  }
+  .badge {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--gray-100);
+    border: 1px solid var(--gray-200);
+    border-radius: 100px;
+    padding: 8px 16px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--black);
+  }
+  .badge .dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+  .badge-free {
+    background: #f0faf4;
+    border-color: #a8e6bf;
+    color: #1a7a3f;
+    font-weight: 600;
+  }
+  .badge-free .dot { background: #25D366; }
 
-/* SECTION */
-.section {
-    padding:60px 40px;
-    text-align:center;
-}
+  /* CTA buttons */
+  .cta-group { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--whatsapp);
+    color: white;
+    padding: 16px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.3);
+  }
+  .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(37,211,102,0.4); }
+  .btn-whatsapp svg { width: 20px; height: 20px; }
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1.5px solid var(--black);
+    color: var(--black);
+    padding: 16px 24px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+  }
+  .btn-outline:hover { background: var(--black); color: var(--white); }
 
-/* GRID */
-.grid {
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-    margin-top:30px;
-}
+  /* Hero right */
+  .hero-right {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .stat-card {
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    padding: 24px 28px;
+    background: var(--white);
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .stat-card:hover { border-color: var(--black); transform: translateX(4px); }
+  .stat-card-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--black);
+    line-height: 1;
+  }
+  .stat-card-label { font-size: 0.82rem; color: var(--gray-600); margin-top: 4px; font-weight: 400; }
+  .stat-card-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 
-/* CARD */
-.card {
-    background:white;
-    padding:15px;
-    border-radius:10px;
-    transition:0.4s;
-    opacity:0;
-    transform:translateY(30px);
-}
+  .free-card {
+    background: var(--black);
+    color: var(--white);
+    border-radius: 8px;
+    padding: 24px 28px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .free-card-icon { font-size: 2.5rem; flex-shrink: 0; }
+  .free-card-title {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+  .free-card-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  .free-card-sub { font-size: 0.78rem; color: #aaa; margin-top: 4px; }
 
-.card img {
-    width:100%;
-    border-radius:5px;
-}
+  /* ── DIVIDER ── */
+  .section-divider {
+    height: 1px;
+    background: var(--gray-200);
+    margin: 0 6vw;
+  }
 
-.card:hover {
-    transform:translateY(-10px);
-    box-shadow:0 15px 30px rgba(0,0,0,0.2);
-}
+  /* ── BOOKS SECTION ── */
+  .books-section {
+    padding: 80px 6vw;
+    background: var(--white);
+  }
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 48px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .section-eyebrow {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--black);
+  }
+  .section-sub { font-size: 0.9rem; color: var(--gray-400); font-weight: 400; }
 
-/* SHOW ANIMATION */
-.show {
-    opacity:1;
-    transform:translateY(0);
-    transition:1s;
-}
+  .books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1px;
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .book-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 18px 20px;
+    background: var(--white);
+    border-right: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--gray-200);
+    transition: background 0.15s;
+  }
+  .book-item:hover { background: var(--gray-100); }
+  .book-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--gray-400);
+    min-width: 22px;
+    padding-top: 1px;
+  }
+  .book-info { flex: 1; }
+  .book-name {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--black);
+    line-height: 1.4;
+  }
+  .book-name-hi {
+    font-size: 0.78rem;
+    color: var(--gray-400);
+    margin-top: 2px;
+    line-height: 1.3;
+  }
+  .book-acts {
+    display: inline-block;
+    background: var(--gray-100);
+    border-radius: 3px;
+    padding: 2px 7px;
+    font-size: 0.68rem;
+    color: var(--gray-600);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin-top: 5px;
+  }
 
-/* WHATSAPP BUTTON */
-.whatsapp {
-    display:inline-block;
-    margin-top:10px;
-    padding:8px 15px;
-    background:#25D366;
-    color:white;
-    text-decoration:none;
-    border-radius:5px;
-    font-size:14px;
-}
+  /* ── OFFER SECTION ── */
+  .offer-section {
+    padding: 80px 6vw;
+    background: var(--black);
+    color: var(--white);
+  }
+  .offer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .offer-left .section-eyebrow { color: var(--gold); }
+  .offer-left .section-title { color: var(--white); }
+  .offer-details { margin-top: 36px; display: flex; flex-direction: column; gap: 20px; }
+  .offer-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #222;
+  }
+  .offer-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .offer-label { font-size: 0.85rem; color: #aaa; }
+  .offer-value { font-size: 0.95rem; font-weight: 600; color: var(--white); text-align: right; }
+  .offer-value.green { color: #4ade80; }
+  .offer-value.gold { color: var(--gold); }
 
-/* FOOTER */
-footer {
-    background:#111;
-    color:white;
-    padding:20px;
-    text-align:center;
-}
+  .offer-right {
+    background: #111;
+    border-radius: 12px;
+    padding: 40px;
+    border: 1px solid #222;
+  }
+  .offer-price-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .offer-price-big {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .offer-price-note { font-size: 0.82rem; color: #666; margin-bottom: 28px; }
+  .offer-features { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-bottom: 32px; }
+  .offer-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.88rem;
+    color: #ccc;
+  }
+  .offer-features li::before {
+    content: '✓';
+    width: 20px; height: 20px;
+    background: #1a3a26;
+    color: #4ade80;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .btn-whatsapp-dark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--whatsapp);
+    color: white;
+    padding: 18px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: opacity 0.2s;
+    width: 100%;
+  }
+  .btn-whatsapp-dark:hover { opacity: 0.88; }
+
+  /* ── SHIPPING SECTION ── */
+  .shipping-section {
+    padding: 70px 6vw;
+    background: var(--gray-100);
+  }
+  .shipping-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    margin-top: 48px;
+  }
+  .ship-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 28px 24px;
+    text-align: center;
+    border: 1px solid var(--gray-200);
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .ship-card:hover { border-color: var(--black); transform: translateY(-3px); }
+  .ship-icon { font-size: 2.2rem; margin-bottom: 12px; }
+  .ship-title { font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; }
+  .ship-desc { font-size: 0.82rem; color: var(--gray-600); line-height: 1.5; }
+  .ship-price { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 900; margin-top: 8px; }
+
+  /* ── ABOUT SECTION ── */
+  .about-section {
+    padding: 80px 6vw;
+    background: var(--white);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .about-tag {
+    display: inline-block;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  .about-text { font-size: 0.95rem; color: var(--gray-600); line-height: 1.8; margin-top: 16px; }
+  .about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .about-stat {
+    padding: 24px;
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    text-align: center;
+  }
+  .about-stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--black);
+  }
+  .about-stat-label { font-size: 0.78rem; color: var(--gray-400); margin-top: 4px; }
+
+  /* ── ADDRESS ── */
+  .address-section {
+    padding: 50px 6vw;
+    background: var(--black);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .address-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .address-text { font-size: 0.95rem; color: #ccc; line-height: 1.7; }
+  .address-links { display: flex; gap: 12px; flex-wrap: wrap; }
+  .address-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .address-link:hover { opacity: 0.85; }
+  .link-wa { background: var(--whatsapp); color: white; }
+  .link-ig { background: #e1306c; color: white; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #050505;
+    color: #555;
+    text-align: center;
+    padding: 24px;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+  }
+  footer span { color: var(--gold); }
+
+  /* ── FLOATING WA ── */
+  .float-wa {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    background: var(--whatsapp);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.5);
+    z-index: 999;
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: pulse 2.5s infinite;
+  }
+  .float-wa:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(37,211,102,0.7); }
+  .float-wa svg { width: 28px; height: 28px; }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.5); }
+    50% { box-shadow: 0 4px 40px rgba(37,211,102,0.8); }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; min-height: auto; padding: 40px 5vw; }
+    .hero::before { display: none; }
+    .hero-right { display: none; }
+    .offer-grid { grid-template-columns: 1fr; }
+    .about-section { grid-template-columns: 1fr; gap: 40px; }
+    .nav-links { display: none; }
+    .address-section { flex-direction: column; align-items: flex-start; }
+  }
+  @media (max-width: 600px) {
+    .books-grid { grid-template-columns: 1fr; }
+    .stat-card-row { grid-template-columns: 1fr; }
+    .price-main { font-size: 2.8rem; }
+  }
 </style>
-
 </head>
-
 <body>
 
-<header>
-    <h2>ANJ PUBLICATIONS</h2>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#books">Publications</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
-
-<div class="hero">
-    <h1>Trusted Legal Books Since 2000</h1>
-    <p>High-quality law books for students & judiciary aspirants</p>
-    <a href="#books" class="btn">View Publications</a>
+<!-- TOPBAR -->
+<div class="topbar">
+  📚 AIBE Exam Coming Up — <span>Limited Stock Available</span> &nbsp;|&nbsp; Free Delivery in Jaipur &nbsp;|&nbsp; Call/WhatsApp: <span>7297959657</span>
 </div>
 
-<div class="section" id="books">
-    <h2>Our Publications</h2>
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#"><span>ANJ</span> Publications</a>
+  <ul class="nav-links">
+    <li><a href="#books">Books</a></li>
+    <li><a href="#offer">Offer</a></li>
+    <li><a href="#shipping">Shipping</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="https://wa.me/917297959657?text=Hi%2C%20I%20want%20to%20order%20the%20AIBE%20Bare%20Act%20Set" target="_blank" class="nav-cta">Order Now →</a></li>
+  </ul>
+</nav>
 
-    <h3>⚖️ Constitutional Law</h3>
-    <div class="grid">
-
-        <div class="card">
-            <img src="https://via.placeholder.com/200">
-            <h4>Constitution Guide</h4>
-            <p>Complete guide with case laws</p>
-            <a class="whatsapp" href="https://wa.me/917297959657?text=I want Constitution Guide">Order on WhatsApp</a>
-        </div>
-
-        <div class="card">
-            <img src="https://via.placeholder.com/200">
-            <h4>Indian Constitution Notes</h4>
-            <p>Quick revision notes</p>
-            <a class="whatsapp" href="https://wa.me/917297959657?text=I want Indian Constitution Notes">Order on WhatsApp</a>
-        </div>
-
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-tag">AIBE 2026 · Diglot Edition · Hindi + English</div>
+    <h1>Complete<br/><em>Bare Act</em><br/>Set for AIBE</h1>
+    <p class="hero-sub">
+      <strong>22 Books · 45+ Acts</strong> — Every law you need for the All India Bar Examination, in one comprehensive Diglot set. Available exclusively from ANJ Publications, Jaipur.
+    </p>
+    <div class="price-block">
+      <div>
+        <div class="price-tag-label">Special Offer Price</div>
+        <div class="price-main">₹2,200</div>
+      </div>
+      <div>
+        <div class="price-old">₹4,800</div>
+        <div class="badge" style="background:#fff7e6;border-color:#f5c842;color:#a07000;font-size:0.75rem;padding:5px 12px;">54% OFF</div>
+      </div>
     </div>
-
-    <h3>🚔 Criminal Law</h3>
-    <div class="grid">
-
-        <div class="card">
-            <img src="https://via.placeholder.com/200">
-            <h4>IPC Complete Guide</h4>
-            <p>Detailed IPC explanations</p>
-            <a class="whatsapp" href="https://wa.me/917297959657?text=I want IPC Complete Guide">Order on WhatsApp</a>
-        </div>
-
+    <div class="badges">
+      <div class="badge badge-free"><span class="dot"></span> Free AIBE Solved Papers (2012–2024)</div>
+      <div class="badge"><span class="dot"></span> Free Delivery — Jaipur</div>
+      <div class="badge"><span class="dot"></span> Free Store Pickup</div>
+      <div class="badge"><span class="dot"></span> Publishing Since 2000</div>
     </div>
+    <div class="cta-group">
+      <a href="https://wa.me/917297959657?text=Hi%2C%20I%20want%20to%20order%20the%20AIBE%20Bare%20Act%20Set%20at%20%E2%82%B92200" target="_blank" class="btn-whatsapp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.104.543 4.078 1.495 5.796L.057 23.857c-.073.28.017.577.232.77.142.13.325.197.511.197.085 0 .171-.014.254-.043l6.354-2.087A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-1.963 0-3.8-.54-5.372-1.476l-.386-.229-3.99 1.31 1.341-3.875-.254-.403A9.714 9.714 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+        Order on WhatsApp
+      </a>
+      <a href="#books" class="btn-outline">View All 22 Books ↓</a>
+    </div>
+  </div>
 
-</div>
+  <div class="hero-right">
+    <div class="stat-card-row">
+      <div class="stat-card">
+        <div class="stat-card-num">22</div>
+        <div class="stat-card-label">Books in the Set</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-num">45+</div>
+        <div class="stat-card-label">Acts Covered</div>
+      </div>
+    </div>
+    <div class="stat-card-row">
+      <div class="stat-card">
+        <div class="stat-card-num">2</div>
+        <div class="stat-card-label">Languages (Hindi + English)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-num">25+</div>
+        <div class="stat-card-label">Years Publishing</div>
+      </div>
+    </div>
+    <div class="free-card">
+      <div class="free-card-icon">🎁</div>
+      <div>
+        <div class="free-card-title">Free with every set</div>
+        <div class="free-card-name">AIBE Solved Papers<br/>2012 – 2024</div>
+        <div class="free-card-sub">Hindi Medium · Complete Past Papers</div>
+      </div>
+    </div>
+    <div class="stat-card" style="text-align:center;border-color:#c8a84b;">
+      <div style="font-size:0.72rem;color:var(--gold);letter-spacing:0.12em;text-transform:uppercase;font-weight:600;margin-bottom:4px;">Special Offer Price</div>
+      <div class="stat-card-num" style="font-size:3rem;">₹2,200</div>
+      <div class="stat-card-label">All 22 Books + Free Solved Paper</div>
+    </div>
+  </div>
+</section>
 
-<div class="section" id="contact">
-    <h2>Contact Us</h2>
-    <p>📞 7297959657</p>
-    <a class="btn" href="https://wa.me/917297959657">Chat on WhatsApp</a>
-</div>
+<div class="section-divider"></div>
 
+<!-- BOOKS SECTION -->
+<section class="books-section" id="books">
+  <div class="section-header">
+    <div>
+      <div class="section-eyebrow">Complete Syllabus Coverage</div>
+      <div class="section-title">All 22 Books<br/>in the Set</div>
+    </div>
+    <div class="section-sub">Diglot Edition — Hindi &amp; English Side by Side<br/>As per Bar Council of India Syllabus</div>
+  </div>
+
+  <div class="books-grid">
+    <div class="book-item">
+      <div class="book-num">01</div>
+      <div class="book-info">
+        <div class="book-name">The Constitution of India</div>
+        <div class="book-name-hi">भारत का संविधान</div>
+      </div>
+    </div>
+    <div class="book-item">
+      <div class="book-num">02</div>
+      <div class="book-info">
+        <div class="book-name">Bharatiya Nyaya Sanhita, 2023</div>
+        <div class="book-name-hi">भारतीय न्याय संहिता, 2023</div>
+      </div>
+    </div>
+    <div class="book-item">
+      <div class="book-num">03</div>
+      <div class="book-info">
+        <div class="book-name">Bharatiya Nagarik Suraksha Sanhita, 2023</div>
+        <div class="book-name-hi">भारतीय नागरिक सुरक्षा संहिता, 2023</div>
+      </div>
+    </div>
+    <div class="book-item">
+      <div class="book-num">04</div>
+      <div class="book-info">
+        <div class="book-name">The Code of Civil Procedure, 1908</div>
+        <div class="book-name-hi">सिविल प्रक्रिया संहिता, 1908</div>
+      </div>
+    </div>
+    <div class="book-item">
+      <div class="book-num">05</div>
+      <div class="book-info">
+        <div class="book-name">Bharatiya Sakshya Adhiniyam, 2023</div>
+        <div class="book-name-hi">भारतीय साक्ष्य अधिनियम, 2023</div>
+      </div>
+    </div>
+    <div class="book-item">
+      <div class="book-num">06</div>
+      <div class="book-info">
+        <div class="book-name">Arbitration &amp; Conciliation Act, 1996</div>
+        <div class="book-name-hi">मध्यस्थम् और सुलह अधिनियम, 1996</div>
+      </div>
+    </div>
+    <div class="book-item">
+      <div class="book-num">07</div>
+      <div class="book-info">
+        <div class="book-name">Family Laws</div>
+        <div class="book-name-hi">पारिवारिक विधियाँ</div>
+        <span class="book-acts">Multiple Acts</span>
+      </div>
+    </div>
+    <div class="book-item">
+      <div class="book-num">08</div>
+      <div class="book-info">
+        <div class="book-name">Public Interest Litigation</div>
+        <div class="book-name-hi">जनहित याचिका</div>
+      </div>
+    </div>
+    <div class="book-item">
+      <div class="book-num">09</div>
+      <div class="book-info">
+        <div class="book-name">Administrative Tribunals Act, 1985</div>
+        <div class="book-name-hi">प्रशासनिक अधिकरण अधिनियम, 1985</div>
+      </div>
+    </div>
+    <div class="book-item">
+      <div class="book-num">10</div>
+      <div class="book-info">
+        <div class="book-name">The Advocates Act, 1961</div>
+        <div class="book-name-hi">अधिवक्ता अधिनियम, 1961</div>
+      </div>
+    </div>
+    <div class="book-item">
+      <div class="book-num">11</div>
+      <div class="book-info">
+        <div class="book-name">Environmental Law</div>
+        <div class="book-name-hi">पर्यावरण विधि</div>
+        <span class="book-acts">Multiple Acts</span>
+      </div>
+    </div>
+    <div class="book-item">
+      <div class="book-num">12</div>
+      <div class="book-info">
+        <div class="book-name">Cyber Law</div>
+        <div class="book-name-hi">साइबर विधि</div>
+        <span class="book-acts">IT Act 2000 + More</span>
+      </div>
+    </div>
+    <div class="book-item">
+      <div class="book-num">13</div>
+      <div class="book-info">
+        <div class="book-name">Labour &amp; Industrial Laws</div>
+        <div class="book-name-hi">श्रम एवं औद्योगिक विधियाँ</div>
+        <span class="book-acts">Multiple Acts</span>
+      </div>
+    </div>
+    <div class="book-item">
+      <div class="book-num">14</div>
+      <div class="book-info">
+        <div class="book-name">The Motor Vehicles Act, 1988</div>
+        <div class="book-name-hi">मोटर यान अधिनियम, 1988</div>
+      </div>
+    </div>
+    <div class="book-item">
+      <div class="book-num">15</div>
+      <div class="book-info">
+        <div class="book-name">The Consumer Protection Act, 2019</div>
+        <div class="book-name-hi">उपभोक्ता संरक्षण अधिनियम, 2019</div>
+      </div>
+    </div>
+    <div class="book-item">
+      <div class="book-num">16</div>
+      <div class="book-info">
+        <div class="book-name">The Limitation Act, 1963</div>
+        <div class="book-name-hi">परिसीमा अधिनियम, 1963</div>
+      </div>
+    </div>
+    <div class="book-item">
+      <div class="book-num">17</div>
+      <div class="book-info">
+        <div class="book-name">The Indian Contract Act, 1872</div>
+        <div class="book-name-hi">भारतीय संविदा अधिनियम, 1872</div>
+      </div>
+    </div>
+    <div class="book-item">
+      <div class="book-num">18</div>
+      <div class="book-info">
+        <div class="book-name">The Specific Relief Act, 1963</div>
+        <div class="book-name-hi">विनिर्दिष्ट अनुतोष अधिनियम, 1963</div>
+      </div>
+    </div>
+    <div class="book-item">
+      <div class="book-num">19</div>
+      <div class="book-info">
+        <div class="book-name">The Transfer of Property Act, 1882</div>
+        <div class="book-name-hi">संपत्ति अंतरण अधिनियम, 1882</div>
+      </div>
+    </div>
+    <div class="book-item">
+      <div class="book-num">20</div>
+      <div class="book-info">
+        <div class="book-name">The Negotiable Instruments Act, 1881</div>
+        <div class="book-name-hi">परक्राम्य लिखत अधिनियम, 1881</div>
+      </div>
+    </div>
+    <div class="book-item">
+      <div class="book-num">21</div>
+      <div class="book-info">
+        <div class="book-name">Right to Fair Compensation &amp; Transparency in Land Acquisition Act, 2013</div>
+        <div class="book-name-hi">भूमि अर्जन, पुनर्वासन और पुनर्व्यवस्थापन अधिनियम, 2013</div>
+      </div>
+    </div>
+    <div class="book-item">
+      <div class="book-num">22</div>
+      <div class="book-info">
+        <div class="book-name">Intellectual Property Laws</div>
+        <div class="book-name-hi">बौद्धिक संपदा विधियाँ</div>
+        <span class="book-acts">Multiple Acts</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- OFFER SECTION -->
+<section class="offer-section" id="offer">
+  <div class="offer-grid">
+    <div class="offer-left">
+      <div class="section-eyebrow">What You Get</div>
+      <div class="section-title" style="color:white;">Everything You<br/>Need to Crack<br/>AIBE</div>
+      <div class="offer-details">
+        <div class="offer-row">
+          <div class="offer-label">Complete Bare Act Set</div>
+          <div class="offer-value">22 Books · 45+ Acts</div>
+        </div>
+        <div class="offer-row">
+          <div class="offer-label">Language</div>
+          <div class="offer-value">Hindi + English (Diglot)</div>
+        </div>
+        <div class="offer-row">
+          <div class="offer-label">Edition</div>
+          <div class="offer-value gold">2026 — Latest Updated</div>
+        </div>
+        <div class="offer-row">
+          <div class="offer-label">Free Gift</div>
+          <div class="offer-value green">AIBE Solved Papers 2012–2024 🎁</div>
+        </div>
+        <div class="offer-row">
+          <div class="offer-label">Delivery in Jaipur</div>
+          <div class="offer-value green">FREE</div>
+        </div>
+        <div class="offer-row">
+          <div class="offer-label">Outside Jaipur</div>
+          <div class="offer-value">₹200 Shipping</div>
+        </div>
+        <div class="offer-row">
+          <div class="offer-label">Store Pickup (Jaipur)</div>
+          <div class="offer-value green">FREE</div>
+        </div>
+      </div>
+    </div>
+    <div class="offer-right">
+      <div class="offer-price-label">Total Offer Price</div>
+      <div class="offer-price-big">₹2,200</div>
+      <div class="offer-price-note">Inclusive of 22 Books + Free Solved Paper</div>
+      <ul class="offer-features">
+        <li>22 Bare Acts — Full AIBE Syllabus</li>
+        <li>Hindi + English Diglot Edition</li>
+        <li>Free: AIBE Solved Papers 2012–2024</li>
+        <li>Free delivery within Jaipur</li>
+        <li>Free store pickup available</li>
+        <li>Trusted publisher since year 2000</li>
+        <li>Updated with latest Bar Council syllabus</li>
+      </ul>
+      <a href="https://wa.me/917297959657?text=Hi%2C%20I%20want%20to%20order%20the%20AIBE%20Bare%20Act%20Set%20at%20%E2%82%B92200.%20Please%20confirm%20availability." target="_blank" class="btn-whatsapp-dark">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.104.543 4.078 1.495 5.796L.057 23.857c-.073.28.017.577.232.77.142.13.325.197.511.197.085 0 .171-.014.254-.043l6.354-2.087A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-1.963 0-3.8-.54-5.372-1.476l-.386-.229-3.99 1.31 1.341-3.875-.254-.403A9.714 9.714 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+        Order Now on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SHIPPING SECTION -->
+<section class="shipping-section" id="shipping">
+  <div style="text-align:center;">
+    <div class="section-eyebrow" style="display:inline-block;margin-bottom:10px;">Delivery Options</div>
+    <div class="section-title">Fast &amp; Easy Delivery</div>
+  </div>
+  <div class="shipping-grid">
+    <div class="ship-card">
+      <div class="ship-icon">🏪</div>
+      <div class="ship-title">Store Pickup</div>
+      <div class="ship-desc">Pick up directly from our store in Jaipur. No waiting, no charges.</div>
+      <div class="ship-price" style="color:#16a34a;">FREE</div>
+    </div>
+    <div class="ship-card">
+      <div class="ship-icon">🛵</div>
+      <div class="ship-title">Jaipur Delivery</div>
+      <div class="ship-desc">Free home delivery anywhere in Jaipur city. Quick turnaround.</div>
+      <div class="ship-price" style="color:#16a34a;">FREE</div>
+    </div>
+    <div class="ship-card">
+      <div class="ship-icon">📦</div>
+      <div class="ship-title">Outside Jaipur</div>
+      <div class="ship-desc">Delivered across India via courier. Flat rate, anywhere in India.</div>
+      <div class="ship-price">₹200</div>
+    </div>
+    <div class="ship-card">
+      <div class="ship-icon">💬</div>
+      <div class="ship-title">WhatsApp Order</div>
+      <div class="ship-desc">Just message us — we confirm, pack and ship same or next day.</div>
+      <div class="ship-price" style="font-size:1rem;color:#25D366;font-family:'DM Sans',sans-serif;font-weight:700;">7297959657</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="about-section" id="about">
+  <div>
+    <div class="about-tag">Est. 2000 · Jaipur</div>
+    <div class="section-title">ANJ Publications —<br/>Trusted by Law<br/>Students Since 2000</div>
+    <p class="about-text">
+      ANJ Publications has been serving law students, advocates and legal professionals from Jaipur for over 25 years. We understand the pressure of bar examinations — and we make sure you have the right material at the right price, delivered right to your door.
+    </p>
+    <p class="about-text" style="margin-top:12px;">
+      हम 2000 से कानून के छात्रों और अधिवक्ताओं को सर्वोत्तम कानूनी सामग्री उपलब्ध करा रहे हैं। हमारा मकसद — सही किताब, सही दाम, सही समय पर।
+    </p>
+  </div>
+  <div class="about-stats">
+    <div class="about-stat">
+      <div class="about-stat-num">25+</div>
+      <div class="about-stat-label">Years in Publishing</div>
+    </div>
+    <div class="about-stat">
+      <div class="about-stat-num">22</div>
+      <div class="about-stat-label">Books in AIBE Set</div>
+    </div>
+    <div class="about-stat">
+      <div class="about-stat-num">45+</div>
+      <div class="about-stat-label">Acts Covered</div>
+    </div>
+    <div class="about-stat">
+      <div class="about-stat-num">₹2.2K</div>
+      <div class="about-stat-label">Complete Set Price</div>
+    </div>
+  </div>
+</section>
+
+<!-- ADDRESS SECTION -->
+<section class="address-section">
+  <div>
+    <div class="address-label">Visit Us / Store Pickup</div>
+    <div class="address-text">
+      New Market, Swai Jai Singh Highway<br/>
+      Khasa Khoti Chauraha, Station Rd<br/>
+      Gopalbari, Jaipur, Rajasthan 302006
+    </div>
+  </div>
+  <div class="address-links">
+    <a href="https://wa.me/917297959657?text=Hi%2C%20I%20want%20to%20order%20the%20AIBE%20Bare%20Act%20Set" target="_blank" class="address-link link-wa">
+      📱 WhatsApp: 7297959657
+    </a>
+    <a href="https://www.instagram.com/anjpublications" target="_blank" class="address-link link-ig">
+      📸 @anjpublications
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-    <p>© 2026 ANJ Publications</p>
+  © 2025 <span>ANJ Publications</span> · Jaipur · Publishing Since 2000 · <a href="https://www.instagram.com/anjpublications" style="color:#c8a84b;text-decoration:none;">@anjpublications</a>
 </footer>
 
-<script>
-const cards = document.querySelectorAll('.card');
-
-window.addEventListener('scroll', () => {
-    const trigger = window.innerHeight * 0.85;
-
-    cards.forEach(card => {
-        const top = card.getBoundingClientRect().top;
-
-        if(top < trigger){
-            card.classList.add('show');
-        }
-    });
-});
-</script>
+<!-- FLOATING WA BUTTON -->
+<a class="float-wa" href="https://wa.me/917297959657?text=Hi%2C%20I%20want%20to%20order%20the%20AIBE%20Bare%20Act%20Set%20at%20%E2%82%B92200" target="_blank" title="Order on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.104.543 4.078 1.495 5.796L.057 23.857c-.073.28.017.577.232.77.142.13.325.197.511.197.085 0 .171-.014.254-.043l6.354-2.087A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-1.963 0-3.8-.54-5.372-1.476l-.386-.229-3.99 1.31 1.341-3.875-.254-.403A9.714 9.714 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+</a>
 
 </body>
 </html>
