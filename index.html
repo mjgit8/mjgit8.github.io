@@ -612,6 +612,68 @@
     margin-top: 5px;
   }
 
+  /* ── BARE ACTS DROPDOWN ── */
+  .bare-acts-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--black);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    padding: 18px 24px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-bottom: 0;
+  }
+  .bare-acts-toggle:hover { background: #1a1a1a; }
+  .bare-acts-toggle .toggle-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .bare-acts-toggle .toggle-count {
+    background: var(--gold);
+    color: var(--black);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 100px;
+    letter-spacing: 0.06em;
+  }
+  .bare-acts-toggle .toggle-arrow {
+    width: 22px;
+    height: 22px;
+    border: 2px solid #444;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, border-color 0.2s;
+    flex-shrink: 0;
+  }
+  .bare-acts-toggle.open .toggle-arrow { transform: rotate(180deg); border-color: var(--gold); }
+  .bare-acts-toggle .toggle-arrow svg { width: 11px; height: 11px; fill: none; stroke: #fff; stroke-width: 2.5; }
+
+  .bare-acts-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s cubic-bezier(0.4,0,0.2,1);
+    border: 1px solid var(--gray-200);
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+  }
+  .bare-acts-panel.open {
+    max-height: 1200px;
+  }
+  .bare-acts-toggle { border-radius: 8px; }
+  .bare-acts-toggle.open { border-radius: 8px 8px 0 0; }
+
   /* ── OFFER SECTION ── */
   .offer-section {
     padding: 80px 6vw;
@@ -883,12 +945,20 @@
   }
   .book-card-cover {
     background: #1a2e28;
-    height: 220px;
+    height: 320px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
+  }
+  .book-card-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    padding: 8px;
   }
   .book-card-cover-inner {
     width: 100%;
@@ -1126,7 +1196,7 @@
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.104.543 4.078 1.495 5.796L.057 23.857c-.073.28.017.577.232.77.142.13.325.197.511.197.085 0 .171-.014.254-.043l6.354-2.087A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-1.963 0-3.8-.54-5.372-1.476l-.386-.229-3.99 1.31 1.341-3.875-.254-.403A9.714 9.714 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
         Order on WhatsApp
       </a>
-      <a href="#books" class="btn-outline">View Bare Acts List ↓</a>
+      <a href="#books" class="btn-outline" onclick="setTimeout(function(){var p=document.getElementById('bareActsPanel');var b=document.getElementById('bareActsToggle');if(!p.classList.contains('open')){p.classList.add('open');b.classList.add('open');b.setAttribute('aria-expanded','true');b.querySelector('span:first-child').textContent='Hide Bare Acts List';}},300)">View Bare Acts List ↓</a>
     </div>
   </div>
 
@@ -1179,6 +1249,19 @@
     <div class="section-sub">Diglot Edition — Hindi &amp; English Side by Side<br/>As per Bar Council of India Syllabus</div>
   </div>
 
+  <!-- DROPDOWN TOGGLE BUTTON -->
+  <button class="bare-acts-toggle" id="bareActsToggle" onclick="toggleBareActs()" aria-expanded="false">
+    <div class="toggle-left">
+      <span>View All 22 Bare Acts in the Set</span>
+      <span class="toggle-count">22 Books · 45+ Acts</span>
+    </div>
+    <div class="toggle-arrow">
+      <svg viewBox="0 0 12 12"><polyline points="2,4 6,8 10,4"/></svg>
+    </div>
+  </button>
+
+  <!-- COLLAPSIBLE PANEL -->
+  <div class="bare-acts-panel" id="bareActsPanel">
   <div class="books-grid">
     <div class="book-item">
       <div class="book-num">01</div>
@@ -1340,6 +1423,27 @@
       </div>
     </div>
   </div>
+  </div><!-- end bare-acts-panel -->
+
+  <script>
+  function toggleBareActs() {
+    var btn = document.getElementById('bareActsToggle');
+    var panel = document.getElementById('bareActsPanel');
+    var isOpen = panel.classList.contains('open');
+    if (isOpen) {
+      panel.classList.remove('open');
+      btn.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.querySelector('span:first-child').textContent = 'View All 22 Bare Acts in the Set';
+    } else {
+      panel.classList.add('open');
+      btn.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+      btn.querySelector('span:first-child').textContent = 'Hide Bare Acts List';
+    }
+  }
+  </script>
+
 </section>
 
 <div class="section-divider"></div>
@@ -1433,14 +1537,14 @@
 
   </div>
 
-  <!-- COMBO OFFER STRIP -->
+  <!-- COMBO OFFER STRIP — 3 books -->
   <div class="combo-strip">
     <div class="combo-strip-left">
       <div class="combo-strip-tag">🎉 Combo Deal — Free Delivery</div>
-      <div class="combo-strip-title">Order all 3 books together<br/>or with the AIBE Bare Act Set</div>
+      <div class="combo-strip-title">Order 3 books Combo</div>
       <div class="combo-strip-desc">
         All 3 books together: ₹480 &nbsp;·&nbsp;
-        <span>Free delivery anywhere in Jaipur</span> &nbsp;·&nbsp;
+        <span>Free delivery in Jaipur</span> &nbsp;·&nbsp;
         Order with AIBE Set = <span>Free delivery across India</span>
       </div>
     </div>
@@ -1456,6 +1560,47 @@
       </a>
     </div>
   </div>
+
+  <!-- MEGA COMBO STRIP — 3 books + AIBE set -->
+  <div class="combo-strip" style="margin-top:16px;background:linear-gradient(135deg,#1a3a1a,#0a2a0a);border:1.5px solid #c8a84b;">
+    <div class="combo-strip-left">
+      <div class="combo-strip-tag" style="color:#4ade80;">🏆 Best Value — Complete Bundle</div>
+      <div class="combo-strip-title" style="font-size:1.35rem;">AIBE Set + 3 Books Combo</div>
+      <div class="combo-strip-desc" style="margin-top:10px;">
+        <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:8px;">
+          <span style="background:#1a1a1a;border:1px solid #333;border-radius:6px;padding:6px 12px;font-size:0.8rem;color:#ccc;">
+            📚 AIBE Bare Act Set &nbsp;<strong style="color:#fff;">₹2,200</strong> <span style="text-decoration:line-through;color:#666;font-size:0.72rem;">₹5,100</span>
+          </span>
+          <span style="color:#888;font-size:1rem;">+</span>
+          <span style="background:#1a1a1a;border:1px solid #333;border-radius:6px;padding:6px 12px;font-size:0.8rem;color:#ccc;">
+            📖 3 Books Combo &nbsp;<strong style="color:#fff;">₹480</strong> <span style="text-decoration:line-through;color:#666;font-size:0.72rem;">₹800</span>
+          </span>
+          <span style="color:#888;font-size:1rem;">=</span>
+          <span style="background:var(--gold);border-radius:6px;padding:6px 14px;font-size:0.88rem;font-weight:700;color:#0a0a0a;">
+            ₹2,500 Only
+          </span>
+        </div>
+        <span style="color:#aaa;font-size:0.78rem;text-decoration:line-through;">Original: ₹5,900</span>
+        &nbsp;·&nbsp;
+        <span style="color:#4ade80;font-weight:600;">🚚 Free Delivery</span>
+        &nbsp;·&nbsp;
+        <span style="color:#aaa;">+ Free AIBE Solved Papers 2012–2025 (₹400)</span>
+      </div>
+    </div>
+    <div class="combo-strip-right">
+      <div style="text-align:center;">
+        <div style="font-size:0.62rem;color:#888;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:3px;">Everything Together</div>
+        <div style="font-size:0.72rem;color:#666;text-decoration:line-through;margin-bottom:2px;">₹5,900</div>
+        <div style="font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:900;color:#c8a84b;line-height:1;">₹2,500</div>
+        <div style="font-size:0.7rem;color:#4ade80;font-weight:600;margin-top:3px;">Free Delivery 🚚</div>
+      </div>
+      <a href="https://wa.me/917297959657?text=Hi%2C%20I%20want%20to%20order%20the%20Mega%20Combo%3A%20AIBE%20Bare%20Act%20Set%20%2B%203%20Books%20(Law%20of%20Taxation%20%2B%20PIL%20%2B%20Law%20of%20Torts)%20at%20%E2%82%B92500%20with%20Free%20Delivery" target="_blank" class="combo-wa-btn" style="background:#c8a84b;color:#0a0a0a;font-weight:700;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.104.543 4.078 1.495 5.796L.057 23.857c-.073.28.017.577.232.77.142.13.325.197.511.197.085 0 .171-.014.254-.043l6.354-2.087A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-1.963 0-3.8-.54-5.372-1.476l-.386-.229-3.99 1.31 1.341-3.875-.254-.403A9.714 9.714 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+        Order Full Bundle Now
+      </a>
+    </div>
+  </div>
+
 </section>
 
 <div class="section-divider"></div>
